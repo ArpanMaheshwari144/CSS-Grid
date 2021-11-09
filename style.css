@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: red;
+    height: 500px;
+    /* width: 700px; */
+    display: grid;
+
+    /* grid-template-rows: 120px 120px 120px;
+    grid-template-columns: 120px 120px 120px; */
+    /* grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); */
+
+    /* 1fr means 1 fraction of the entire width available */
+    grid-template-rows: 143px 1fr 43px;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    row-gap: 12px;
+    column-gap: 12px;
+
+    /* justify-items: start; */
+    /* align-items: center; */
+    place-items: center;
+}
+
+.item {
+    background-color: aqua;
+    height: 122px;
+    width: 122px;
+}
+
+.item1 {
+    /* line numnber one se start hoga or 3 par end hoga */
+    /* grid-column-start: 1;
+    grid-column-end: 4; */
+    grid-column: 1 / span 3;
+
+    background-color: black;
+    color: white;
+
+    width: 100vw;
+}
+
+.item2 {
+    /* justify-items work on grid containers justify-self works on grid items */
+    /* align-items work on grid containers align-self works on grid items */
+    /* justify-self: end;
+    align-self: center; */
+
+    /* justify-self and align-self both are in one  */
+    /* place-self: center; */
+}
+
+.footer {
+    /* line numnber one se start hoga or 3 par end hoga */
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: black;
+    width: 100vw;
+}
